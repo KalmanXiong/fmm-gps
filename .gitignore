@@ -1,4 +1,5 @@
 *.txt
 GPS.nosync
+.DS_Store
 */.DS_Store
 .vscode
