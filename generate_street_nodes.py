@@ -33,6 +33,7 @@ for index, street in streets.iterrows():
   else:
     id_2 = dict_points[end]
   data.append([street['OBJECTID'], street['OBJECTID'], id_1, id_2, street['Shape__Len'], boundary[0].x, boundary[0].y, boundary[1].x, boundary[1].y, street['geometry']])
+  data.append([street['OBJECTID'], street['OBJECTID'], id_2, id_1, street['Shape__Len'], boundary[1].x, boundary[1].y, boundary[0].x, boundary[0].y, street['geometry']])
 
 df = gpd.GeoDataFrame(data, columns = ['_uid_', 'id', 'source', 'target', 'cost','x1','y1','x2','y2','geometry'])
-df.to_file('data/GPS.nosync/street_nodes_dual.shp')
+df.to_file('data/GPS.nosync/_street_nodes_dual.shp')
