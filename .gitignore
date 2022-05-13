@@ -4,3 +4,4 @@ GPS.nosync
 */.DS_Store
 .vscode
 ignore_files
+cache
